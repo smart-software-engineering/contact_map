@@ -9,6 +9,7 @@ defmodule ContactMap.Application do
   def start(_type, _args) do
     children = [
       ContactMapWeb.Telemetry,
+      ContactMap.Repo,
       {DNSCluster, query: Application.get_env(:contact_map, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ContactMap.PubSub},
       # Start the Finch HTTP client for sending emails

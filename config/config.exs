@@ -8,6 +8,7 @@
 import Config
 
 config :contact_map,
+  ecto_repos: [ContactMap.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint

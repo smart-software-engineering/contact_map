@@ -5,7 +5,6 @@ services:
 
   db:
     image: postgres
-    restart: always
     environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: contact_map_dev
